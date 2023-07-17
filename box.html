@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+</head>
+<style>
+    body{
+        background-color: rgb(33, 227, 30);
+    }
+ h1{
+    padding-top: 40px;
+    text-align: center;
+ }
+ .container{
+    width: 400px;
+    height: 300px;
+    background-color: #54f519;
+ }
+ button{
+    margin-top: 15px;
+    width: 70px;
+    height: 35px;
+    background-color:whitesmoke;
+    border-radius: 20px;
+    color: rgb(255, 194, 192);
+ }
+ .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ input{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    color: rgb(47, 190, 203);
+    padding-left: 20px;
+ }
+ .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+ }
+#demo{
+   text-align: center;
+}
+.container{
+    padding-top: 3px;
+   margin: 5% 35%;
+   border-radius: 20px;
+}
+</style>
+<body>
+    <h1>MESSAGE BOX</h1>
+      <div class="container">
+         <h2 style="text-align: center;">Text Message</h2><hr>
+            <div class="box">
+                <h2>Enter Ur Message Here</h2>
+                <input type="text" name="boxx" id="boxx" placeholder="Enter Your Message" >
+            </div>
+           <div class="btn">
+            <button type="button" onclick="getMessage()" >SUBMIT</button>
+            <button type="button" onclick="getMessage()">RESET</button>
+           
+           </div>
+           <p id="demo"></p>
+      </div>
+</body>
+<script>
+      const messageInput=document.getElementById("boxx");
+function getMessage(){
+  document.getElementById("demo").innerHTML=messageInput.value;
+  messageInput.value="";
+}
+</script>
+</html>
